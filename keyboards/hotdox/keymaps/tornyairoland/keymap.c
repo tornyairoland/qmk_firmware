@@ -129,7 +129,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                                                  _______,
                                _______, _______, _______,
     // right hand
-    RESET,    _______, _______, _______, KC_VOLD, KC_VOLU, KC_MUTE,
+    QK_BOOT,  _______, _______, _______, KC_VOLD, KC_VOLU, KC_MUTE,
     _______,  XXXXXXX, KC_HOME, KC_UP,   KC_PGUP, XXXXXXX, KC_MPLY,
               XXXXXXX, KC_LEFT, KC_DOWN, KC_RGHT, XXXXXXX, _______,
     _______,  XXXXXXX, KC_END,  XXXXXXX, KC_PGDN, XXXXXXX, _______,
@@ -170,7 +170,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                                                  _______,
                                _______, _______, _______,
     // right hand
-    _______,  _______, KC_NLCK, KC_PSLS, KC_PAST, KC_PMNS, _______,
+    _______,  _______, KC_NUM,  KC_PSLS, KC_PAST, KC_PMNS, _______,
     _______,  _______, KC_KP_7, KC_KP_8, KC_KP_9, KC_PPLS, _______,
               _______, KC_KP_4, KC_KP_5, KC_KP_6, KC_PPLS, _______,
     _______,  _______, KC_KP_1, KC_KP_2, KC_KP_3, KC_PENT, _______,
