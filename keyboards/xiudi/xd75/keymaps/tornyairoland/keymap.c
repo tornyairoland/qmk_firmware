@@ -64,7 +64,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
      * |--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------|
      * | RSHIFT |        |        |        |        | (      |        |        |        | )      |        |        |        | \      |        |
      * |--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------|
-     * |        |        |        |        |        |        |        |        |        |        |        |        |        |        |        |
+     * |        |        |        |        |        |        |        |        |        |        |        | HOME   | PG DN  | PG UP  | END    |
      * '--------------------------------------------------------------------------------------------------------------------------------------'
      */
     [_LOWER] = LAYOUT_ortho_5x15(
@@ -72,7 +72,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_LCBR, XXXXXXX, XXXXXXX, XXXXXXX, KC_RCBR, KC_UNDS, KC_PLUS, KC_GRV,  KC_NUBS, KC_F12,
         XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_LBRC, XXXXXXX, XXXXXXX, XXXXXXX, KC_RBRC, KC_MINS, KC_EQL,  XXXXXXX, KC_PIPE, XXXXXXX,
         KC_RSFT, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_LPRN, XXXXXXX, XXXXXXX, XXXXXXX, KC_RPRN, XXXXXXX, XXXXXXX, XXXXXXX, KC_BSLS, XXXXXXX,
-        _______, _______, _______, _______, _______, _______, XXXXXXX, XXXXXXX, XXXXXXX, _______, _______, _______, _______, _______, _______
+        _______, _______, _______, _______, _______, _______, XXXXXXX, XXXXXXX, XXXXXXX, _______, _______, KC_HOME, KC_PGDN, KC_PGUP, KC_END
     ),
 
     /* RAISE
@@ -85,7 +85,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
      * |--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------|
      * |        |        |        |        |        |        |        |        |        |        |        |        |        |        |        |
      * |--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------|
-     * |        |        |        |        |        |        |        |        |        |        |        |        |        |        |        |
+     * |        |        |        |        |        |        |        |        |        |        |        | HOME   | PG DN  | PG UP  | END    |
      * '--------------------------------------------------------------------------------------------------------------------------------------'
      */
     [_RAISE] = LAYOUT_ortho_5x15(
@@ -93,7 +93,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_INS,
         KC_CAPS, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_LEFT, KC_DOWN, KC_UP,   KC_RGHT, XXXXXXX, XXXXXXX,
         XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
-        _______, _______, _______, _______, _______, _______, XXXXXXX, XXXXXXX, XXXXXXX, _______, _______, _______, _______, _______, _______
+        _______, _______, _______, _______, _______, _______, XXXXXXX, XXXXXXX, XXXXXXX, _______, _______, KC_HOME, KC_PGDN, KC_PGUP, KC_END
     ),
 
     /* ADJUST
@@ -122,7 +122,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     switch (keycode) {
         case VRSN:
             if (record->event.pressed) {
-                SEND_STRING (QMK_KEYBOARD "/" QMK_KEYMAP " @ " QMK_VERSION " / " QMK_BUILDDATE);
+                SEND_STRING(QMK_KEYBOARD "/" QMK_KEYMAP " @ " QMK_VERSION " / " QMK_BUILDDATE);
             }
             return false;
         case LOWER:
